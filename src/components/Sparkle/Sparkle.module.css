@@ -1,0 +1,43 @@
+.sparkles-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #1c2748, #5d5959);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+
+  margin: 0;
+  overflow: hidden;
+
+  color: white;
+}
+
+.sparkle {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  animation: sparkleAnimation 2s linear;
+}
+
+@keyframes sparkleAnimation {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-50px) scale(1.5);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 0;
+  }
+}
